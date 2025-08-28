@@ -4,26 +4,26 @@ trigger:
       - main 
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: Azure Pipelines
+  demands: npm
 
 steps:
-  - task: NodeTool@0
-    inputs:
-      versionSpec: '22.x'   
-    displayName: 'Instalar Node.js'
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
 
-  - script: |
-      corepack enable
-      corepack prepare yarn@stable --activate
-      yarn --version
-    displayName: 'Configurar Yarn'
+- task: Npm@1
+  displayName: 'npm run build'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build'
 
-  - script: |
-      yarn install
-    displayName: 'Instalar dependências'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: build
 
-  - script: |
-      yarn build
-    displayName: 'Build do projeto'
 
 
