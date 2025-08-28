@@ -19,7 +19,7 @@ steps:
     displayName: 'Configurar Yarn'
 
   - script: |
-      yarn install --immutable
+      yarn install
     displayName: 'Instalar dependências'
 
   - script: |
