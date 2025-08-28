@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "./ui/card"
 import { CheckCircle } from "lucide-react"
 
@@ -43,7 +45,7 @@ export function AboutSection() {
               </p>
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-primary">50+</div>
+                  <div className="text-2xl font-bold text-primary">20</div>
                   <div className="text-sm text-muted-foreground">Projetos Entregues</div>
                 </div>
                 <div>

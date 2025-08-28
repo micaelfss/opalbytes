@@ -4,9 +4,8 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'OpalBYTES',
+  description: 'Mais do que uma software house, somos parceiros estratégicos na criação de soluções disruptivas, ajudando empresas a se reinventarem, inovarem e se manterem competitivas em um mercado em constante evolução.',
 }
 
 export default function RootLayout({

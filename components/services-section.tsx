@@ -70,18 +70,7 @@ export function ServicesSection() {
                 soluções que não apenas atendem às suas necessidades atuais, mas também posicionam seu negócio para
                 crescimento e inovação futuros.
               </p>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                onClick={() => {
-                  const element = document.getElementById("services")
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" })
-                  }
-                }}
-              >
-                Inicie Seu Projeto
-              </Button>
+
             </CardContent>
           </Card>
         </div>

@@ -48,7 +48,7 @@ export function Navigation() {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-primary hover:underline cursor-pointer ${
                 activeSection === item.id ? "text-primary border-b-2 border-accent pb-1" : "text-muted-foreground"
               }`}
             >
