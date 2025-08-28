@@ -1,0 +1,31 @@
+trigger:
+  branches:
+    include:
+      - main 
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '22.x'   
+    displayName: 'Instalar Node.js'
+
+  - script: |
+      corepack enable
+      corepack prepare yarn@stable --activate
+      yarn --version
+    displayName: 'Configurar Yarn'
+
+  - script: |
+      yarn install --frozen-lockfile
+    displayName: 'Instalar dependências'
+
+  - script: |
+      yarn build
+    displayName: 'Build do projeto'
+
+  - script: |
+      yarn test
+    displayName: 'Rodar testes'
