@@ -67,8 +67,9 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy to Production'
             inputs:
-              azureSubscription: '0ff1e022-43f9-45fb-bd18-22eecfcb5fef'
+              azureSubscription: 'Azure-ServiceConnection'
               appType: 'webApp'
-              resourceGroupName: '$(resourceGroup)'
+              appName: 'app-opalbytes'
+              resourceGroupName: 'app-opalbytes_group'
               package: '$(System.ArtifactsDirectory)/drop'
               deploymentMethod: 'auto'
