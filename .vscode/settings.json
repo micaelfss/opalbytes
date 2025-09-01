@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/bf4b610d-caa1-4b24-92de-142a7a1a3aa8/resourceGroups/app-opalbytes_group/providers/Microsoft.Web/sites/app-opalbytes",
+    "appService.deploySubpath": "."
 }
