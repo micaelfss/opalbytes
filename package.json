@@ -8,6 +8,10 @@
     "lint": "next lint",
     "start": "node server.js"
   },
+    "engines": {
+    "node": "20.19.4",
+    "npm": "10.8.2"
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
